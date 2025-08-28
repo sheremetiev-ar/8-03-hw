@@ -6,8 +6,8 @@
 
 Скриншоты локально развернутого GitLab и запущенного gitlab-runner:
 
-!(https://github.com/sheremetiev-ar/8-03-hw/tree/main/img/img1.png)
-!(https://github.com/sheremetiev-ar/8-03-hw/tree/main/img/img2.png)
+![Screen1](https://github.com/sheremetiev-ar/8-03-hw/tree/main/img/img1.png)
+![Screen2](https://github.com/sheremetiev-ar/8-03-hw/tree/main/img/img2.png)
 
 Конфигурация раннера:
 
@@ -84,6 +84,6 @@ build-job2:
 
 Скриншоты сборок:
 
-!(https://github.com/sheremetiev-ar/8-03-hw/tree/main/img/test1.png)
-!(https://github.com/sheremetiev-ar/8-03-hw/tree/main/img/build1.png)
-!(https://github.com/sheremetiev-ar/8-03-hw/tree/main/img/build2.png)
+![Screen3](https://github.com/sheremetiev-ar/8-03-hw/tree/main/img/test1.png)
+![Screen4](https://github.com/sheremetiev-ar/8-03-hw/tree/main/img/build1.png)
+![Screen5](https://github.com/sheremetiev-ar/8-03-hw/tree/main/img/build2.png)
