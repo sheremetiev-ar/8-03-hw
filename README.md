@@ -6,7 +6,7 @@
 
 Скриншоты локально развернутого GitLab и запущенного gitlab-runner:
 
-![Screen1](https://github.com/sheremetiev-ar/8-03-hw/tree/main/img/img1.png)
+![Screen1](/img/img1.png)
 ![Screen2](https://github.com/sheremetiev-ar/8-03-hw/tree/main/img/img2.png)
 
 Конфигурация раннера:
