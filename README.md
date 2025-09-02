@@ -1,45 +1,23 @@
-# Домашнее задание к занятию "`Система мониторинга Zabbix`" - `Шереметьев Аким Русланович`
-
-
+# Домашнее задание к занятию "`Система мониторинга Zabbix. Часть 2`" - `Шереметьев Аким Русланович`
 
 ### Задание 1
 
-Скриншот авторизации:
+Template с новыми Item:
 
-![Screen1](/img/admin.png)
+![Screen1](/img/hw1.png)
 
-Скриншот рабочей области Zabbix:
+Скриншот работы нового шаблона:
 
-![Screen2](/img/screen.png)
+![Screen2](/img/hw2.png)
 
-Перечень используемых команд:
+### Задание 1 и Задание 2
 
-```
-
-wget https://repo.zabbix.com/zabbix/7.0/debian/pool/main/z/zabbix-release/zabbix-release_latest_7.0+debian12_all.deb
-dpkg -i zabbix-release_latest_7.0+debian12_all.deb
-apt update
-
-apt install zabbix-server-pgsql zabbix-frontend-php php8.2-pgsql zabbix-apache-conf zabbix-sql-scripts zabbix-agent
-
-sudo -u postgres createuser --pwprompt zabbix
-sudo -u postgres createdb -O zabbix zabbix
-
-zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix
-
-```
-
-### Задание 2
-
-Агенты, подключенные к серверу:
+Скриншот страницы хостов с шаблонами:
 
 ![Screen3](/img/hosts.png)
 
-Скриншот лога zabbix-agent:
+### Задание 4
 
-![Screen4](/img/logs.png)
+Скриншот кастомного дашборда:
 
-Поступающие от агентов данные:
-
-![Screen5](/img/mon.png)
-
+![Screen4](/img/dash.png)
