@@ -18,6 +18,6 @@
 
 Обращение к HAProxy без использования домена example.local:
 
-![Screen3](/img/robin.png)
+![Screen3](/img/error.png)
 
 
