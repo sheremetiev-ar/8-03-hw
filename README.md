@@ -1,23 +1,84 @@
-# Домашнее задание к занятию "`Система мониторинга Zabbix. Часть 2`" - `Шереметьев Аким Русланович`
+# Домашнее задание к занятию "`Кластеризация и балансировка нагрузки`" - `Шереметьев Аким Русланович`
 
 ### Задание 1
 
-Template с новыми Item:
+Конфигурационный файл haproxy:
 
-![Screen1](/img/hw1.png)
+```
+listen stats
+        bind                    :888
+        mode                    http
+        stats                   enable
+        stats uri               /stats
+        stats refresh           5s
+        stats realm             Haproxy\ Statistics
 
-Скриншот работы нового шаблона:
+frontend example
+        mode                    http
+        bind                    :8088
+        default_backend         web_servers
 
-![Screen2](/img/hw2.png)
+backend web_servers
+        mode                    http
+        balance                 roundrobin
+        option                  httpchk
+        http-check              send            meth            GET     uri     /index.html
+        server          s1      127.0.0.1:8888  check
+        server          s2      127.0.0.1:9999  check
 
-### Задание 1 и Задание 2
+listen web_tcp
+        bind                    :1325
+        server          s1      127.0.0.1:8888  check inter 3s
+        server          s2      127.0.0.1:9999  check inter 3s
 
-Скриншот страницы хостов с шаблонами:
+```
 
-![Screen3](/img/hosts.png)
+Результат обращения к HAProxy:
 
-### Задание 4
+![Screen1](/img/curl.png)
 
-Скриншот кастомного дашборда:
+### Задание 2
 
-![Screen4](/img/dash.png)
+Конфигурационный файл haproxy с внесенными изменениями:
+
+```
+listen stats
+        bind                    :888
+        mode                    http
+        stats                   enable
+        stats uri               /stats
+        stats refresh           5s
+        stats realm             Haproxy\ Statistics
+
+frontend example
+        mode                    http
+        bind                    :8088
+#       default_backend         web_servers
+        acl ACL_example         hdr(host) -i example.local      
+        use_backend             web_servers     if      ACL_example
+
+backend web_servers
+        mode                    http
+        balance                 roundrobin
+        option                  httpchk
+        http-check              send            meth            GET     uri     /index.html
+        server          s1      127.0.0.1:8888  check weight 2
+        server          s2      127.0.0.1:9999  check weight 3
+        server          s3      127.0.0.1:7777  check weight 4
+
+listen web_tcp
+        bind                    :1325
+        server          s1      127.0.0.1:8888  check inter 3s
+        server          s2      127.0.0.1:9999  check inter 3s
+        server          s3      127.0.0.1:7777  check inter 3s
+```
+
+Обращение к HAProxy c использованием домена example.local:
+
+![Screen2](/img/drobin.png)
+
+Обращение к HAProxy без использования домена example.local:
+
+![Screen3](/img/robin.png)
+
+
