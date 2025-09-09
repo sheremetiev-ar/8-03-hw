@@ -20,6 +20,7 @@ sudo rsync -a --progress --delete --exclude="/.*" --checksum . /tmp/backup/
 
 Содержание скрипта:
 ```
+#!/bin/sh
 rsync -a --delete --progress --checksum . /tmp/backup/
 ```
 
