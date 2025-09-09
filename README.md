@@ -8,13 +8,13 @@
 sudo rsync -a --progress --delete --exclude="/.*" --checksum . /tmp/backup/
 ```
 
-Скриншот оригинальной директории:
+Скриншот выполнения команды:
 
-![Screen1](/img/orig.png)
+![Screen1](/img/hw11.png)
 
-Скриншот резервированной директории:
+Результат:
 
-![Screen2](/img/back1.png)
+![Screen2](/img/hw12.png)
 
 ### Задание 2
 
@@ -22,21 +22,13 @@ sudo rsync -a --progress --delete --exclude="/.*" --checksum . /tmp/backup/
 
 Задача для crontab'а:
 ```
-30 9 * * * /home/akim/scripts/daily_backup.sh
+40 10 * * * /home/akim/scripts/daily_backup.sh
 ```
 
-Скриншот оригинальной директории:
+Результат копирования:
 
-![Screen3](/img/orig2.png)
+![Screen3](/img/hw2.png)
 
-Скриншот резервированной директории:
+Логи rsync:
 
-![Screen4](/img/back2.png)
-
-Логи crontab: 
-
-![Screen5](/img/cron.png)
-
-Сообщение об успешном выполнении бэкапа:
-
-![Screen6](/img/
+![Screen4](/img/log.png)
