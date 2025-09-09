@@ -32,7 +32,3 @@ rsync -a --delete --progress --checksum . /tmp/backup/
 Результат копирования:
 
 ![Screen3](/img/hw2.png)
-
-Логи rsync:
-
-![Screen4](/img/log.png)
