@@ -21,12 +21,17 @@ sudo rsync -a --progress --delete --exclude="/.*" --checksum . /tmp/backup/
 Содержание скрипта:
 ```
 #!/bin/sh
-rsync -a --delete --progress --checksum . /tmp/backup/
+
+SRC="$HOME/"
+DEST="/tmp/backup/"
+LOG="/tmp/backup.log"
+
+rsync -a -v --delete "$SRC" "$DEST" >> "$LOG" 2>&1
 ```
 
 Задача для crontab'а:
 ```
-40 10 * * * /home/akim/scripts/daily_backup.sh
+* 11 * * * /home/akim/scripts/daily_backup.sh
 ```
 
 Результат копирования:
