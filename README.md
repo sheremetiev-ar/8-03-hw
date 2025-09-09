@@ -37,3 +37,7 @@ rsync -a -v --delete "$SRC" "$DEST" >> "$LOG" 2>&1
 Результат копирования:
 
 ![Screen3](/img/hw2.png)
+
+Логи результата резервного копирования:
+
+![Screen4](/img/log.png)
