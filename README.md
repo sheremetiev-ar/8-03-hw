@@ -18,7 +18,10 @@ sudo rsync -a --progress --delete --exclude="/.*" --checksum . /tmp/backup/
 
 ### Задание 2
 
-Содержание скрипта для резервного копирования можно увидеть [здесь](/script/daily_backup.sh).
+Содержание скрипта:
+```
+rsync -a --delete --progress --checksum . /tmp/backup/
+```
 
 Задача для crontab'а:
 ```
