@@ -18,16 +18,16 @@
 
 Скриншот systemctl status memcached:
 
-![Screen1](/img/stmc.png)
+![Screen1](/img/stmc.jpeg)
 
 ### Задание 3
 
 Скриншот добавленных ключей и их последующего удаления после 5 секунд:
 
-![Screen2](/img/set.png)
+![Screen2](/img/set.jpeg)
 
 ### Задание 4
 
 Скриншот записанных ключей и значений из базы данных Redis:
 
-![Screen3](/img/red.png)
+![Screen3](/img/red.jpeg)
