@@ -26,7 +26,7 @@
 
 ![Screen5](/img/queue.png)
 
-Вывод команды rabbitmqctl cluster_status с двух нод
+[Вывод команды rabbitmqctl cluster_status с двух нод](status)
 
 Скриншоты выполнения команды rabbitmqadmin get queue:
 
