@@ -1,0 +1,153 @@
+# First node
+
+Cluster status of node rabbit@rmq01.localdomain ...
+Basics
+
+Cluster name: rabbit@m1
+Total CPU cores available cluster-wide: 4
+
+Disk Nodes
+
+rabbit@rmq01.localdomain
+rabbit@rmq02.localdomain
+
+Running Nodes
+
+rabbit@rmq01.localdomain
+rabbit@rmq02.localdomain
+
+Versions
+
+rabbit@rmq01.localdomain: RabbitMQ 3.13.7 on Erlang 26.2.5.13
+rabbit@rmq02.localdomain: RabbitMQ 3.13.7 on Erlang 26.2.5.13
+
+CPU Cores
+
+Node: rabbit@rmq01.localdomain, available CPU cores: 2
+Node: rabbit@rmq02.localdomain, available CPU cores: 2
+
+Maintenance status
+
+Node: rabbit@rmq01.localdomain, status: not under maintenance
+Node: rabbit@rmq02.localdomain, status: not under maintenance
+
+Alarms
+
+(none)
+
+Network Partitions
+
+(none)
+
+Listeners
+
+Node: rabbit@rmq01.localdomain, interface: [::], port: 15672, protocol: http, purpose: HTTP API
+Node: rabbit@rmq01.localdomain, interface: [::], port: 25672, protocol: clustering, purpose: inter-node and CLI tool communication
+Node: rabbit@rmq01.localdomain, interface: [::], port: 5672, protocol: amqp, purpose: AMQP 0-9-1 and AMQP 1.0
+Node: rabbit@rmq02.localdomain, interface: [::], port: 25672, protocol: clustering, purpose: inter-node and CLI tool communication
+Node: rabbit@rmq02.localdomain, interface: [::], port: 5672, protocol: amqp, purpose: AMQP 0-9-1 and AMQP 1.0
+Node: rabbit@rmq02.localdomain, interface: [::], port: 15672, protocol: http, purpose: HTTP API
+
+Feature flags
+
+Flag: classic_mirrored_queue_version, state: enabled
+Flag: classic_queue_type_delivery_support, state: enabled
+Flag: detailed_queues_endpoint, state: enabled
+Flag: direct_exchange_routing_v2, state: enabled
+Flag: drop_unroutable_metric, state: enabled
+Flag: empty_basic_get_metric, state: enabled
+Flag: feature_flags_v2, state: enabled
+Flag: implicit_default_bindings, state: enabled
+Flag: khepri_db, state: disabled
+Flag: listener_records_in_ets, state: enabled
+Flag: maintenance_mode_status, state: enabled
+Flag: message_containers, state: enabled
+Flag: message_containers_deaths_v2, state: enabled
+Flag: quorum_queue, state: enabled
+Flag: quorum_queue_non_voters, state: enabled
+Flag: restart_streams, state: enabled
+Flag: stream_filtering, state: enabled
+Flag: stream_queue, state: enabled
+Flag: stream_sac_coordinator_unblock_group, state: enabled
+Flag: stream_single_active_consumer, state: enabled
+Flag: stream_update_config_command, state: enabled
+Flag: tracking_records_in_ets, state: enabled
+Flag: user_limits, state: enabled
+Flag: virtual_host_metadata, state: enabled
+
+# Second node
+
+luster status of node rabbit@rmq02.localdomain ...
+Basics
+
+Cluster name: rabbit@m2
+Total CPU cores available cluster-wide: 4
+
+Disk Nodes
+
+rabbit@rmq01.localdomain
+rabbit@rmq02.localdomain
+
+Running Nodes
+
+rabbit@rmq01.localdomain
+rabbit@rmq02.localdomain
+
+Versions
+
+rabbit@rmq02.localdomain: RabbitMQ 3.13.7 on Erlang 26.2.5.13
+rabbit@rmq01.localdomain: RabbitMQ 3.13.7 on Erlang 26.2.5.13
+
+CPU Cores
+
+Node: rabbit@rmq02.localdomain, available CPU cores: 2
+Node: rabbit@rmq01.localdomain, available CPU cores: 2
+
+Maintenance status
+
+Node: rabbit@rmq02.localdomain, status: not under maintenance
+Node: rabbit@rmq01.localdomain, status: not under maintenance
+
+Alarms
+
+(none)
+
+Network Partitions
+
+(none)
+
+Listeners
+
+Node: rabbit@rmq02.localdomain, interface: [::], port: 25672, protocol: clustering, purpose: inter-node and CLI tool communication
+Node: rabbit@rmq02.localdomain, interface: [::], port: 5672, protocol: amqp, purpose: AMQP 0-9-1 and AMQP 1.0
+Node: rabbit@rmq02.localdomain, interface: [::], port: 15672, protocol: http, purpose: HTTP API
+Node: rabbit@rmq01.localdomain, interface: [::], port: 15672, protocol: http, purpose: HTTP API
+Node: rabbit@rmq01.localdomain, interface: [::], port: 25672, protocol: clustering, purpose: inter-node and CLI tool communication
+Node: rabbit@rmq01.localdomain, interface: [::], port: 5672, protocol: amqp, purpose: AMQP 0-9-1 and AMQP 1.0
+
+Feature flags
+
+Flag: classic_mirrored_queue_version, state: enabled
+Flag: classic_queue_type_delivery_support, state: enabled
+Flag: detailed_queues_endpoint, state: enabled
+Flag: direct_exchange_routing_v2, state: enabled
+Flag: drop_unroutable_metric, state: enabled
+Flag: empty_basic_get_metric, state: enabled
+Flag: feature_flags_v2, state: enabled
+Flag: implicit_default_bindings, state: enabled
+Flag: khepri_db, state: disabled
+Flag: listener_records_in_ets, state: enabled
+Flag: maintenance_mode_status, state: enabled
+Flag: message_containers, state: enabled
+Flag: message_containers_deaths_v2, state: enabled
+Flag: quorum_queue, state: enabled
+Flag: quorum_queue_non_voters, state: enabled
+Flag: restart_streams, state: enabled
+Flag: stream_filtering, state: enabled
+Flag: stream_queue, state: enabled
+Flag: stream_sac_coordinator_unblock_group, state: enabled
+Flag: stream_single_active_consumer, state: enabled
+Flag: stream_update_config_command, state: enabled
+Flag: tracking_records_in_ets, state: enabled
+Flag: user_limits, state: enabled
+Flag: virtual_host_metadata, state: enabled
