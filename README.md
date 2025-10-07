@@ -18,7 +18,9 @@
 
 Синопсис pgdump:
 
+```
 pg_dump [connection-option...] [option...] [dbname]
+```
 
 В разделе connection-option мы указываем данные для подключения к базе: пользователя, хост, порт.
 В разделе option указываем дополнительные опции вроде подробностей вывода, формата резервной копии и подобное.
@@ -26,7 +28,9 @@ pg_dump [connection-option...] [option...] [dbname]
 
 Соответственно команда будет выглядеть примерно следующим образом:
 
+```
 pg_dump -U postgres -h localhost -p 5432 -F c -b -v -f my_db_backup.dump my_db
+```
 
 Где:
 
@@ -43,14 +47,17 @@ my_db - имя резервируемой базы данных
 
 Синопсис pgrestore:
 
+```
 pg_restore [connection-option...] [option...] [filename]
+```
 
 В разделе connection-option мы указываем данные для подключения к базе: пользователя, хост, порт.
 В разделе option указываем дополнительные опции по восстановлению.
 В разделе filename требуется указать расположение созданного ранее бэкапа.
 
+```
 pg_restore -U postgres -h localhost -p 5432 -d my_db-restored -v my_db_backup.dump
-
+```
 -U - имя пользователя
 -h - адрес сервера
 -p - порт
