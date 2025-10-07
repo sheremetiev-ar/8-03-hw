@@ -66,9 +66,13 @@ pg_restore [connection-option...] [option...] [filename]
 pg_restore -U postgres -h localhost -p 5432 -d my_db-restored -v my_db_backup.dump
 ```
 -U - имя пользователя
+
 -h - адрес сервера
+
 -p - порт
+
 -d - имя базы данных, куда производится восстановление (база должна существовать или её нужно создать заранее)
+
 -v - указание о подробном выводе
 
 ### Задание 3
