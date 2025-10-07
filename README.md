@@ -81,4 +81,41 @@ pg_restore -U postgres -h localhost -p 5432 -d my_db-restored -v my_db_backup.du
 
 ### Задание 3
 
+В MySQL Community Edition нет прямого функционала инкрементного резервного копирования, но есть возможно применить решение с использованием бинарных логов, куда будут записываться инкрементные данные.
+
+Прежде всего необходимо проверить, включены ли бинарные логи в файле /etc/mysql/mysql.conf.d/mysqld.cnf:
+
+```
+[mysqld]
+log_bin = /var/log/mysql/mysql-bin
+binlog_format = ROW
+server_id = 1
+expire_logs_days = 7  # логи будут храниться 7 дней
+```
+
+Затем делаем полное копирование:
+
+```
+mysqldump -u root -p my_db > my_db-backup.sql
+```
+
+Где:
+
+-u - имя пользователя
+
+-p - запрос на вход по паролю
+
+Когда мы хотим получить инкрементные данные, необходимо скопировать бинарные логи, появившиеся после последнего полного бэкапа:
+
+```
+mysqlbinlog --start-position=LAST_POSITION /var/log/mysql/mysql-bin.000001 > inc_my_db.sql
+```
+
+Где:
+
+LAST_POSITION - позиция, с которой начинаете хранить инкрементные изменения
+
+mysql-bin.000001 - файл бинарных логов
+
+
 
