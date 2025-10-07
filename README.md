@@ -116,6 +116,3 @@ mysqlbinlog --start-position=LAST_POSITION /var/log/mysql/mysql-bin.000001 > inc
 LAST_POSITION - позиция, с которой начинаете хранить инкрементные изменения
 
 mysql-bin.000001 - файл бинарных логов
-
-
-
